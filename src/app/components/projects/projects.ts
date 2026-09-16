@@ -14,22 +14,16 @@ import { ProjectCard } from '../project-card/project-card';
 export class Projects {
 
   selectedProject: Project | null = null;
-
   selectedGalleryImage: string | null = null;
 
-
   projects: Project[] = [
-
     {
       id: 1,
-
       name: 'Sistema de Veterinaria',
-
       status: 'Terminado',
-
       category: 'Sistema Web',
 
-      image: '/images/projects/veterinaria.jpg',
+      image: 'images/projects/veterinaria.jpg',
 
       description:
         'Gestión de pacientes, turnos y consultas.',
@@ -62,23 +56,20 @@ export class Projects {
       icon: '🐾',
 
       gallery: [
-        '/images/projects/veterinaria-1.jpg',
-        '/images/projects/veterinaria-2.jpg',
-        '/images/projects/veterinaria-3.jpg'
+        'images/projects/veterinaria-1.jpg',
+        'images/projects/veterinaria-2.jpg',
+        'images/projects/veterinaria-3.jpg'
       ]
     },
 
 
     {
       id: 2,
-
       name: 'CENTINELA',
-
       status: 'Idea / Prototipo',
-
       category: 'UX / UI · Aplicación',
 
-      image: '/images/projects/centinela.jpg',
+      image: 'images/projects/centinela.jpg',
 
       description:
         'Propuesta de aplicación para seguridad ciudadana.',
@@ -108,23 +99,20 @@ export class Projects {
       icon: '◈',
 
       gallery: [
-        '/images/projects/centinela-1.jpg',
-        '/images/projects/centinela-2.jpg',
-        '/images/projects/centinela-3.jpg'
+        'images/projects/centinela-1.jpg',
+        'images/projects/centinela-2.jpg',
+        'images/projects/centinela-3.jpg'
       ]
     },
 
 
     {
       id: 3,
-
       name: 'ConsulGlobal AI',
-
       status: 'Terminado',
-
       category: 'Página Web · IA',
 
-      image: '/images/projects/consulglobal.jpg',
+      image: 'images/projects/consulglobal.jpg',
 
       description:
         'Sitio web orientado a servicios y soluciones de IA.',
@@ -153,23 +141,20 @@ export class Projects {
       icon: '◎',
 
       gallery: [
-        '/images/projects/consulglobal-1.jpg',
-        '/images/projects/consulglobal-2.jpg',
-        '/images/projects/consulglobal-3.jpg'
+        'images/projects/consulglobal-1.jpg',
+        'images/projects/consulglobal-2.jpg',
+        'images/projects/consulglobal-3.jpg'
       ]
     },
 
 
     {
       id: 4,
-
       name: 'Instalación Eléctrica Jeep',
-
       status: 'Terminado',
-
       category: 'Web Interactiva',
 
-      image: '/images/projects/jeep.jpg',
+      image: 'images/projects/jeep.jpg',
 
       description:
         'Diagramas, circuitos y guía técnica interactiva.',
@@ -199,23 +184,20 @@ export class Projects {
       icon: '⚙',
 
       gallery: [
-        '/images/projects/jeep-1.jpg',
-        '/images/projects/jeep-2.jpg',
-        '/images/projects/jeep-3.jpg'
+        'images/projects/jeep-1.jpg',
+        'images/projects/jeep-2.jpg',
+        'images/projects/jeep-3.jpg'
       ]
     },
 
 
     {
       id: 5,
-
       name: 'Zephyr',
-
       status: 'Terminado',
-
       category: 'Página Web',
 
-      image: '/images/projects/zephyr.jpg',
+      image: 'images/projects/zephyr.jpg',
 
       description:
         'Página web moderna con identidad visual tecnológica.',
@@ -244,12 +226,11 @@ export class Projects {
       icon: '≋',
 
       gallery: [
-        '/images/projects/zephyr-1.jpg',
-        '/images/projects/zephyr-2.jpg',
-        '/images/projects/zephyr-3.jpg'
+        'images/projects/zephyr-1.jpg',
+        'images/projects/zephyr-2.jpg',
+        'images/projects/zephyr-3.jpg'
       ]
     }
-
   ];
 
 
