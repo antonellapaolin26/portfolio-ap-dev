@@ -497,10 +497,6 @@
 }
 
 
-/* =========================
-   BRILLO PRINCIPAL
-========================= */
-
 .ai-background-glow {
   position: absolute;
 
@@ -1004,7 +1000,9 @@
 ========================= */
 
 @keyframes tagPulse {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 0.75;
     transform: scale(0.9);
   }
@@ -1013,22 +1011,28 @@
     opacity: 1;
     transform: scale(1.12);
   }
+
 }
 
 
 @keyframes titleGradient {
-  0%, 100% {
+
+  0%,
+  100% {
     background-position: 0% 50%;
   }
 
   50% {
     background-position: 100% 50%;
   }
+
 }
 
 
 @keyframes backgroundGlow {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: scale(0.94);
     opacity: 0.75;
   }
@@ -1037,11 +1041,14 @@
     transform: scale(1.07);
     opacity: 1;
   }
+
 }
 
 
 @keyframes pulseCore {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: scale(1);
 
     box-shadow:
@@ -1058,10 +1065,12 @@
       0 0 45px rgba(52, 192, 255, 0.33),
       0 0 110px rgba(112, 53, 255, 0.40);
   }
+
 }
 
 
 @keyframes rotateOrbit {
+
   from {
     transform: rotate(0deg);
   }
@@ -1069,10 +1078,12 @@
   to {
     transform: rotate(360deg);
   }
+
 }
 
 
 @keyframes rotateOrbitReverse {
+
   from {
     transform: rotate(360deg);
   }
@@ -1080,10 +1091,12 @@
   to {
     transform: rotate(0deg);
   }
+
 }
 
 
 @keyframes rotateTech {
+
   from {
     transform: rotate(0deg);
   }
@@ -1091,10 +1104,12 @@
   to {
     transform: rotate(360deg);
   }
+
 }
 
 
 @keyframes rotateTechReverse {
+
   from {
     transform: rotate(360deg);
   }
@@ -1102,11 +1117,14 @@
   to {
     transform: rotate(0deg);
   }
+
 }
 
 
 @keyframes particleFloat {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
     opacity: 0.35;
   }
@@ -1115,22 +1133,26 @@
     transform: translateY(-15px);
     opacity: 1;
   }
+
 }
 
 
 @keyframes textGlow {
-  0%, 100% {
+
+  0%,
+  100% {
     filter: brightness(0.92);
   }
 
   50% {
     filter: brightness(1.22);
   }
+
 }
 
 
 /* =========================
-   RESPONSIVE
+   TABLET
 ========================= */
 
 @media (max-width: 1200px) {
@@ -1156,6 +1178,10 @@
 }
 
 
+/* =========================
+   TABLET CHICA
+========================= */
+
 @media (max-width: 950px) {
 
   .hero {
@@ -1166,7 +1192,7 @@
   .hero-container {
     grid-template-columns: 1fr;
 
-    padding-top: 60px;
+    padding-top: 90px;
     padding-bottom: 80px;
 
     text-align: center;
@@ -1213,19 +1239,35 @@
 }
 
 
+/* =========================
+   CELULAR
+========================= */
+
 @media (max-width: 600px) {
 
+  .hero {
+    min-height: auto;
+
+    align-items: flex-start;
+  }
+
+
   .hero-container {
-    padding: 45px 20px 70px;
+    padding:
+      100px
+      20px
+      70px;
   }
 
 
   .portfolio-tag {
-    margin-bottom: 24px;
+    margin-bottom: 26px;
+
+    padding:
+      8px
+      16px;
 
     font-size: 13px;
-
-    padding: 8px 16px;
   }
 
 
@@ -1236,7 +1278,12 @@
 
 
   .hero h1 {
-    font-size: clamp(40px, 13vw, 58px);
+    font-size:
+      clamp(
+        40px,
+        13vw,
+        58px
+      );
 
     letter-spacing: -2px;
 
@@ -1310,6 +1357,10 @@
 
 }
 
+
+/* =========================
+   REDUCIR MOVIMIENTO
+========================= */
 
 @media (prefers-reduced-motion: reduce) {
 
