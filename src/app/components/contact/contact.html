@@ -1,0 +1,268 @@
+<section class="contact">
+
+  <div class="contact-glow glow-left"></div>
+
+  <div class="contact-glow glow-right"></div>
+
+
+  <div class="contact-container">
+
+
+    <!-- INFORMACIÓN -->
+
+    <div class="contact-info">
+
+      <div class="section-tag">
+
+        <span></span>
+
+        CONTACTO
+
+      </div>
+
+
+      <h2>
+
+        ¿TENÉS UNA
+
+        <span>
+          IDEA?
+        </span>
+
+      </h2>
+
+
+      <h3>
+        Podemos convertirla en una solución digital.
+      </h3>
+
+
+      <p>
+        Si querés conocer más sobre alguno de mis proyectos,
+        realizar una consulta o trabajar juntos en una idea,
+        podés enviarme un mensaje.
+      </p>
+
+
+      <div class="contact-data">
+
+
+        <div class="contact-item">
+
+          <div class="contact-icon">
+            ✉
+          </div>
+
+          <div>
+
+            <small>
+              CONTACTO
+            </small>
+
+            <strong>
+              Enviame un mensaje
+            </strong>
+
+          </div>
+
+        </div>
+
+
+        <div class="contact-item">
+
+          <div class="contact-icon">
+            &lt;/&gt;
+          </div>
+
+          <div>
+
+            <small>
+              DESARROLLO
+            </small>
+
+            <strong>
+              Web · Software · UX/UI
+            </strong>
+
+          </div>
+
+        </div>
+
+
+        <div class="contact-item">
+
+          <div class="contact-icon">
+            ✦
+          </div>
+
+          <div>
+
+            <small>
+              DISPONIBILIDAD
+            </small>
+
+            <strong>
+              Nuevos proyectos
+            </strong>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- FORMULARIO -->
+
+    <div class="contact-form-container">
+
+      <div class="form-header">
+
+        <div class="terminal-dots">
+
+          <span></span>
+          <span></span>
+          <span></span>
+
+        </div>
+
+        <small>
+          NUEVO MENSAJE
+        </small>
+
+      </div>
+
+
+      <form
+        class="contact-form"
+        (ngSubmit)="sendMessage()"
+      >
+
+
+        <!-- NOMBRE -->
+
+        <div class="form-group">
+
+          <label for="name">
+            Nombre
+          </label>
+
+          <input
+            id="name"
+            type="text"
+            name="name"
+            [(ngModel)]="name"
+            placeholder="Tu nombre"
+            [disabled]="isSending"
+          >
+
+        </div>
+
+
+        <!-- EMAIL -->
+
+        <div class="form-group">
+
+          <label for="email">
+            Email
+          </label>
+
+          <input
+            id="email"
+            type="email"
+            name="email"
+            [(ngModel)]="email"
+            placeholder="tuemail@ejemplo.com"
+            [disabled]="isSending"
+          >
+
+        </div>
+
+
+        <!-- MENSAJE -->
+
+        <div class="form-group">
+
+          <label for="message">
+            Mensaje
+          </label>
+
+          <textarea
+            id="message"
+            name="message"
+            [(ngModel)]="message"
+            rows="6"
+            placeholder="Contame sobre tu idea..."
+            [disabled]="isSending"
+          ></textarea>
+
+        </div>
+
+
+        <!-- BOTÓN -->
+
+        <button
+          class="send-button"
+          type="submit"
+          [disabled]="isSending"
+        >
+
+          @if (isSending) {
+
+            Enviando...
+
+          } @else {
+
+            Enviar mensaje
+
+            <span>
+              →
+            </span>
+
+          }
+
+        </button>
+
+
+        <!-- MENSAJE CORRECTO -->
+
+        @if (successMessage) {
+
+          <div class="form-message success">
+
+            <span>
+              ✓
+            </span>
+
+            Mensaje enviado correctamente.
+
+          </div>
+
+        }
+
+
+        <!-- MENSAJE ERROR -->
+
+        @if (errorMessage) {
+
+          <div class="form-message error">
+
+            <span>
+              !
+            </span>
+
+            {{ errorText }}
+
+          </div>
+
+        }
+
+      </form>
+
+    </div>
+
+  </div>
+
+</section>

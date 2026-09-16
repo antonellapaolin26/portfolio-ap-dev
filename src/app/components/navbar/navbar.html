@@ -1,0 +1,91 @@
+<header class="navbar">
+
+  <a
+    href="#inicio"
+    class="logo"
+    (click)="closeMenu()"
+  >
+    <span class="logo-ap">
+      AP
+    </span>
+
+    <span class="logo-dev">
+      DEV
+    </span>
+  </a>
+
+
+  <nav
+    class="nav-links"
+    [class.open]="menuOpen"
+  >
+
+    <a
+      href="#inicio"
+      (click)="closeMenu()"
+    >
+      Inicio
+    </a>
+
+    <a
+      href="#sobre-mi"
+      (click)="closeMenu()"
+    >
+      Sobre mí
+    </a>
+
+    <a
+      href="#tecnologias"
+      (click)="closeMenu()"
+    >
+      Tecnologías
+    </a>
+
+    <a
+      href="#proyectos"
+      (click)="closeMenu()"
+    >
+      Proyectos
+    </a>
+
+    <a
+      href="#contacto"
+      (click)="closeMenu()"
+    >
+      Contacto
+    </a>
+
+    <a
+      href="#contacto"
+      class="mobile-contact-link"
+      (click)="closeMenu()"
+    >
+      Hablemos
+    </a>
+
+  </nav>
+
+
+  <a
+    href="#contacto"
+    class="contact-button"
+  >
+    Hablemos
+  </a>
+
+
+  <button
+    class="menu-button"
+    type="button"
+    aria-label="Abrir menú"
+    [class.active]="menuOpen"
+    (click)="toggleMenu()"
+  >
+
+    <span></span>
+    <span></span>
+    <span></span>
+
+  </button>
+
+</header>

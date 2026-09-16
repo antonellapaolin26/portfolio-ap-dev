@@ -1,0 +1,318 @@
+<section class="projects">
+
+  <div class="projects-glow"></div>
+
+  <div class="projects-container">
+
+
+    <!-- ENCABEZADO -->
+
+    <div class="projects-header">
+
+      <div class="section-tag">
+        <span></span>
+        PORTFOLIO
+      </div>
+
+      <h2>
+        MIS <span>PROYECTOS</span>
+      </h2>
+
+      <p>
+        Algunos de los proyectos que fui desarrollando,
+        desde sistemas completos hasta páginas web,
+        ideas y prototipos.
+      </p>
+
+    </div>
+
+
+    <!-- TARJETAS -->
+
+    <div class="projects-grid">
+
+      @for (project of projects; track project.id) {
+
+        <app-project-card
+          [project]="project"
+          (openProject)="openProject($event)"
+        ></app-project-card>
+
+      }
+
+    </div>
+
+
+    <!-- PROYECTO ABIERTO -->
+
+    @if (selectedProject) {
+
+      <div
+        class="project-detail"
+        id="project-detail"
+      >
+
+
+        <!-- PORTADA -->
+
+        <div class="detail-cover">
+
+          <img
+            [src]="selectedProject.image"
+            [alt]="selectedProject.name"
+          >
+
+          <div class="detail-cover-overlay"></div>
+
+
+          <div class="detail-cover-content">
+
+            <span class="detail-project-icon">
+              {{ selectedProject.icon }}
+            </span>
+
+            <div>
+
+              <span class="detail-category">
+                {{ selectedProject.category }}
+              </span>
+
+              <h3>
+                {{ selectedProject.name }}
+              </h3>
+
+            </div>
+
+          </div>
+
+
+          <div class="detail-cover-actions">
+
+            <span
+              class="detail-status"
+              [class.prototype]="selectedProject.status === 'Idea / Prototipo'"
+            >
+              {{ selectedProject.status }}
+            </span>
+
+            <button
+              class="close-button"
+              type="button"
+              (click)="closeProject()"
+            >
+              ✕
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <!-- PROBLEMA / SOLUCIÓN -->
+
+        <div class="detail-grid">
+
+          <div class="detail-box">
+
+            <span class="detail-icon">
+              !
+            </span>
+
+            <h4>
+              El problema
+            </h4>
+
+            <p>
+              {{ selectedProject.problem }}
+            </p>
+
+          </div>
+
+
+          <div class="detail-box">
+
+            <span class="detail-icon">
+              ✦
+            </span>
+
+            <h4>
+              La solución
+            </h4>
+
+            <p>
+              {{ selectedProject.solution }}
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- TECNOLOGÍAS / FUNCIONALIDADES -->
+
+        <div class="detail-bottom">
+
+          <div class="technologies-box">
+
+            <h4>
+              Tecnologías
+            </h4>
+
+            <div class="detail-technologies">
+
+              @for (
+                technology of selectedProject.technologies;
+                track technology
+              ) {
+
+                <span>
+                  {{ technology }}
+                </span>
+
+              }
+
+            </div>
+
+          </div>
+
+
+          <div class="features-box">
+
+            <h4>
+              Funcionalidades
+            </h4>
+
+            <div class="features-grid">
+
+              @for (
+                feature of selectedProject.features;
+                track feature
+              ) {
+
+                <div class="feature">
+
+                  <span>
+                    ✓
+                  </span>
+
+                  {{ feature }}
+
+                </div>
+
+              }
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- GALERÍA -->
+
+        <div class="project-gallery">
+
+          <div class="gallery-header">
+
+            <span>
+              GALERÍA
+            </span>
+
+            <h4>
+              Capturas del proyecto
+            </h4>
+
+            <p>
+              Algunas pantallas y detalles del desarrollo.
+            </p>
+
+          </div>
+
+
+          <div class="gallery-grid">
+
+            @for (
+              image of selectedProject.gallery;
+              track image
+            ) {
+
+              <div
+                class="gallery-item"
+                (click)="openImage(image)"
+              >
+
+                <img
+                  [src]="image"
+                  [alt]="selectedProject.name"
+                >
+
+                <div class="gallery-zoom">
+                  ⤢
+                </div>
+
+              </div>
+
+            }
+
+          </div>
+
+        </div>
+
+
+        <!-- CERRAR PROYECTO -->
+
+        <button
+          class="close-project-button"
+          type="button"
+          (click)="closeProject()"
+        >
+
+          Cerrar proyecto
+
+          <span>
+            ✕
+          </span>
+
+        </button>
+
+      </div>
+
+    }
+
+  </div>
+
+
+  <!-- VISOR DE IMAGEN -->
+
+  @if (selectedGalleryImage) {
+
+    <div
+      class="image-viewer"
+      (click)="closeImage()"
+    >
+
+      <button
+        class="viewer-close"
+        type="button"
+        (click)="closeImage()"
+      >
+        ✕
+      </button>
+
+      <div
+        class="viewer-content"
+        (click)="$event.stopPropagation()"
+      >
+
+        <img
+          [src]="selectedGalleryImage"
+          alt="Captura ampliada del proyecto"
+        >
+
+      </div>
+
+    </div>
+
+  }
+
+</section>
