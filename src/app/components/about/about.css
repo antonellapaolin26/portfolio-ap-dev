@@ -20,7 +20,6 @@
     #030914;
 }
 
-
 .about-container {
   width: 100%;
   max-width: 1500px;
@@ -35,10 +34,8 @@
   align-items: center;
 
   position: relative;
-
   z-index: 2;
 }
-
 
 /* =========================
    ETIQUETA
@@ -65,7 +62,6 @@
   font-size: 11px;
 }
 
-
 .section-tag span {
   width: 7px;
   height: 7px;
@@ -76,7 +72,6 @@
 
   box-shadow: 0 0 13px #4bdfff;
 }
-
 
 /* =========================
    TÍTULOS
@@ -94,7 +89,6 @@
   font-weight: 700;
 }
 
-
 .about h2 span {
   background:
     linear-gradient(
@@ -109,7 +103,6 @@
   color: transparent;
 }
 
-
 .about h3 {
   max-width: 680px;
 
@@ -123,7 +116,6 @@
 
   line-height: 1.4;
 }
-
 
 /* =========================
    TEXTO
@@ -141,7 +133,6 @@
   line-height: 1.75;
 }
 
-
 /* =========================
    TARJETAS
 ========================= */
@@ -156,7 +147,6 @@
 
   margin-top: 35px;
 }
-
 
 .about-card {
   min-width: 0;
@@ -180,7 +170,6 @@
     box-shadow 0.3s ease;
 }
 
-
 .about-card:hover {
   transform: translateY(-4px);
 
@@ -189,7 +178,6 @@
   box-shadow:
     0 10px 30px rgba(0, 94, 255, 0.10);
 }
-
 
 .card-icon {
   width: 44px;
@@ -215,7 +203,6 @@
   font-size: 22px;
 }
 
-
 .about-card strong {
   display: block;
 
@@ -223,7 +210,6 @@
 
   font-size: 15px;
 }
-
 
 .about-card small {
   display: block;
@@ -235,14 +221,14 @@
   font-size: 11px;
 }
 
-
 /* =========================
-   VISUAL / CÓDIGO
+   FOTO
 ========================= */
 
 .about-visual {
   width: 100%;
-  min-height: 520px;
+
+  min-height: 560px;
 
   position: relative;
 
@@ -251,159 +237,209 @@
   justify-content: center;
 }
 
+.profile-photo-wrapper {
+  width: 100%;
+  max-width: 480px;
 
-.code-window {
-  width: 90%;
-  max-width: 580px;
-
-  overflow: hidden;
-
-  border-radius: 20px;
-
-  border: 1px solid rgba(69, 126, 255, 0.45);
-
-  background: rgba(6, 18, 39, 0.82);
-
-  box-shadow:
-    0 0 80px rgba(66, 68, 255, 0.12);
+  position: relative;
 }
 
+.profile-photo-glow {
+  position: absolute;
 
-.code-header {
-  height: 52px;
+  width: 420px;
+  height: 420px;
 
-  padding: 0 20px;
+  left: 50%;
+  top: 50%;
 
-  display: flex;
-  align-items: center;
-
-  gap: 9px;
-
-  border-bottom:
-    1px solid rgba(73, 109, 172, 0.25);
-}
-
-
-.code-header span {
-  width: 10px;
-  height: 10px;
+  transform:
+    translate(-50%, -50%);
 
   border-radius: 50%;
 
-  background: #52647f;
+  background:
+    rgba(77, 61, 255, 0.20);
+
+  filter: blur(90px);
+
+  pointer-events: none;
 }
 
+.profile-photo-frame {
+  width: 100%;
+  height: 570px;
 
-.code-header span:nth-child(1) {
-  background: #ff5d5d;
-}
-
-
-.code-header span:nth-child(2) {
-  background: #ffc857;
-}
-
-
-.code-header span:nth-child(3) {
-  background: #4fd783;
-}
-
-
-.code-content {
-  padding: 48px;
+  position: relative;
 
   overflow: hidden;
 
-  color: #bbc8dd;
+  border-radius: 28px;
 
-  font-family:
-    Consolas,
-    monospace;
+  border:
+    1px solid
+    rgba(76, 142, 255, 0.50);
 
-  font-size: 17px;
+  background: #071329;
 
-  line-height: 2;
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.35),
+    0 0 55px rgba(77, 76, 255, 0.12);
 }
 
+.profile-photo {
+  width: 100%;
+  height: 100%;
 
-.purple {
-  color: #bb70ff;
+  display: block;
+
+  object-fit: cover;
+
+  object-position: center;
 }
 
-
-.blue {
-  color: #5bdcff;
-}
-
-
-.green {
-  color: #69e3aa;
-}
-
-
-.comment {
-  color: #526985;
-}
-
-
-/* =========================
-   MENSAJE FLOTANTE
-========================= */
-
-.floating-message {
+.profile-photo-overlay {
   position: absolute;
 
-  right: 0;
-  bottom: 60px;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent 45%,
+      rgba(3, 9, 22, 0.45) 65%,
+      rgba(3, 9, 22, 0.96) 100%
+    );
+}
+
+.profile-info {
+  position: absolute;
+
+  left: 28px;
+  right: 28px;
+  bottom: 28px;
+
+  z-index: 3;
+}
+
+.profile-status {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 8px;
+
+  margin-bottom: 12px;
+
+  color: #a9c2e8;
+
+  font-size: 9px;
+
+  letter-spacing: 1.8px;
+}
+
+.profile-status > span {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #4ee6af;
+
+  box-shadow:
+    0 0 12px
+    rgba(78, 230, 175, 0.85);
+}
+
+.profile-info h4 {
+  margin: 0;
+
+  color: white;
+
+  font-size: 28px;
+
+  font-weight: 600;
+}
+
+.profile-info p {
+  margin-top: 7px;
+
+  color: #9baccc;
+
+  font-size: 13px;
+}
+
+/* =========================
+   TARJETA FLOTANTE
+========================= */
+
+.profile-tech-card {
+  position: absolute;
+
+  right: -38px;
+  bottom: 75px;
 
   display: flex;
   align-items: center;
 
   gap: 13px;
 
-  padding: 18px 23px;
+  padding: 16px 20px;
 
-  border-radius: 13px;
+  border-radius: 14px;
 
-  border: 1px solid rgba(98, 91, 255, 0.55);
+  border:
+    1px solid
+    rgba(98, 91, 255, 0.55);
 
-  background: rgba(12, 25, 55, 0.92);
+  background:
+    rgba(10, 22, 48, 0.94);
 
   box-shadow:
-    0 0 30px rgba(84, 76, 255, 0.17);
+    0 0 35px
+    rgba(84, 76, 255, 0.18);
+
+  backdrop-filter: blur(15px);
+
+  z-index: 5;
 }
 
+.tech-symbol {
+  width: 40px;
+  height: 40px;
 
-.floating-message > span {
-  color: #9f68ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  font-size: 25px;
+  border-radius: 10px;
+
+  background:
+    rgba(104, 76, 255, 0.13);
+
+  color: #8e6bff;
+
+  font-size: 17px;
 }
 
-
-.floating-message strong {
+.profile-tech-card strong {
   display: block;
 
   color: white;
 
-  font-size: 13px;
+  font-size: 11px;
 
-  letter-spacing: 2px;
+  letter-spacing: 1.8px;
 }
 
-
-.floating-message small {
+.profile-tech-card small {
   display: block;
 
-  margin-top: 4px;
+  margin-top: 5px;
 
-  color: #7285a5;
+  color: #7488a8;
 
   font-size: 9px;
-
-  letter-spacing: 1px;
 }
-
 
 /* =========================
    BRILLO
@@ -420,13 +456,13 @@
 
   border-radius: 50%;
 
-  background: rgba(80, 53, 255, 0.10);
+  background:
+    rgba(80, 53, 255, 0.10);
 
   filter: blur(100px);
 
   pointer-events: none;
 }
-
 
 /* =========================
    TABLET
@@ -440,25 +476,24 @@
       6%;
   }
 
-
   .about-container {
     grid-template-columns: 1fr;
 
-    gap: 50px;
+    gap: 55px;
   }
-
 
   .about-visual {
-    min-height: 450px;
+    min-height: auto;
   }
 
-
-  .code-window {
-    max-width: 650px;
+  .profile-photo-wrapper {
+    max-width: 460px;
   }
 
+  .profile-photo-frame {
+    height: 550px;
+  }
 }
-
 
 /* =========================
    CELULAR
@@ -477,35 +512,30 @@
       65px;
   }
 
-
   .about-container {
-    display: grid;
-
     grid-template-columns: 1fr;
 
     gap: 40px;
   }
 
-
   .about-content {
     width: 100%;
   }
 
-
   .section-tag {
-    padding: 7px 13px;
+    padding:
+      7px
+      13px;
 
     font-size: 9px;
 
     letter-spacing: 2px;
   }
 
-
   .section-tag span {
     width: 6px;
     height: 6px;
   }
-
 
   .about h2 {
     margin-top: 20px;
@@ -517,7 +547,6 @@
     letter-spacing: -1px;
   }
 
-
   .about h3 {
     margin-top: 20px;
 
@@ -525,7 +554,6 @@
 
     line-height: 1.4;
   }
-
 
   .about-content > p {
     margin-top: 17px;
@@ -535,9 +563,6 @@
     line-height: 1.7;
   }
 
-
-  /* TARJETAS EN UNA SOLA COLUMNA */
-
   .about-cards {
     grid-template-columns: 1fr;
 
@@ -546,13 +571,11 @@
     margin-top: 28px;
   }
 
-
   .about-card {
     width: 100%;
 
     padding: 15px;
   }
-
 
   .card-icon {
     width: 42px;
@@ -561,11 +584,9 @@
     font-size: 19px;
   }
 
-
   .about-card strong {
     font-size: 14px;
   }
-
 
   .about-card small {
     font-size: 10px;
@@ -573,86 +594,80 @@
     line-height: 1.4;
   }
 
-
-  /* BLOQUE DE CÓDIGO */
-
   .about-visual {
     width: 100%;
+
     min-height: auto;
 
     display: block;
   }
 
-
-  .code-window {
+  .profile-photo-wrapper {
     width: 100%;
-    max-width: none;
 
-    border-radius: 16px;
+    max-width: 360px;
+
+    margin: auto;
   }
 
+  .profile-photo-frame {
+    height: 470px;
 
-  .code-header {
-    height: 45px;
-
-    padding: 0 15px;
+    border-radius: 20px;
   }
 
-
-  .code-header span {
-    width: 8px;
-    height: 8px;
+  .profile-info {
+    left: 20px;
+    right: 20px;
+    bottom: 22px;
   }
 
-
-  .code-content {
-    padding:
-      28px
-      20px
-      85px;
-
-    font-size: 12px;
-
-    line-height: 1.85;
-
-    white-space: normal;
-
-    overflow-wrap: anywhere;
+  .profile-info h4 {
+    font-size: 23px;
   }
 
-
-  /* MENSAJE DENTRO DEL BLOQUE */
-
-  .floating-message {
-    right: 12px;
-    bottom: 18px;
-
-    padding: 12px 14px;
-
-    gap: 9px;
-
-    border-radius: 10px;
+  .profile-info p {
+    font-size: 11px;
   }
 
-
-  .floating-message > span {
-    font-size: 19px;
-  }
-
-
-  .floating-message strong {
-    font-size: 10px;
-
-    letter-spacing: 1.3px;
-  }
-
-
-  .floating-message small {
+  .profile-status {
     font-size: 7px;
 
-    letter-spacing: 0.5px;
+    letter-spacing: 1.2px;
   }
 
+  .profile-tech-card {
+    position: relative;
+
+    right: auto;
+    bottom: auto;
+
+    width: calc(100% - 30px);
+
+    margin:
+      -18px
+      auto
+      0;
+
+    padding:
+      13px
+      15px;
+  }
+
+  .tech-symbol {
+    width: 36px;
+    height: 36px;
+
+    font-size: 15px;
+  }
+
+  .profile-tech-card strong {
+    font-size: 10px;
+  }
+
+  .profile-tech-card small {
+    font-size: 8px;
+  }
 
   .about-glow {
     width: 300px;

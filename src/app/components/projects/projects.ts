@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 import { Project } from '../../models/project.model';
+
 import { ProjectCard } from '../project-card/project-card';
 
 @Component({
@@ -14,15 +15,16 @@ import { ProjectCard } from '../project-card/project-card';
 export class Projects {
 
   selectedProject: Project | null = null;
+
   selectedGalleryImage: string | null = null;
 
   projects: Project[] = [
+
     {
       id: 1,
       name: 'Sistema de Veterinaria',
       status: 'Terminado',
       category: 'Sistema Web',
-
       image: 'images/projects/veterinaria.jpg',
 
       description:
@@ -62,13 +64,11 @@ export class Projects {
       ]
     },
 
-
     {
       id: 2,
       name: 'CENTINELA',
       status: 'Idea / Prototipo',
       category: 'UX / UI · Aplicación',
-
       image: 'images/projects/centinela.jpg',
 
       description:
@@ -105,13 +105,11 @@ export class Projects {
       ]
     },
 
-
     {
       id: 3,
       name: 'ConsulGlobal AI',
       status: 'Terminado',
       category: 'Página Web · IA',
-
       image: 'images/projects/consulglobal.jpg',
 
       description:
@@ -147,13 +145,11 @@ export class Projects {
       ]
     },
 
-
     {
       id: 4,
       name: 'Instalación Eléctrica Jeep',
       status: 'Terminado',
       category: 'Web Interactiva',
-
       image: 'images/projects/jeep.jpg',
 
       description:
@@ -190,13 +186,11 @@ export class Projects {
       ]
     },
 
-
     {
       id: 5,
       name: 'Zephyr',
       status: 'Terminado',
       category: 'Página Web',
-
       image: 'images/projects/zephyr.jpg',
 
       description:
@@ -230,9 +224,54 @@ export class Projects {
         'images/projects/zephyr-2.jpg',
         'images/projects/zephyr-3.jpg'
       ]
-    }
-  ];
+    },
 
+    {
+      id: 6,
+      name: 'AI + SQL Lab',
+      status: 'Terminado',
+      category: 'Inteligencia Artificial · SQL',
+      image: 'images/projects/ai-sql-lab-1.png',
+
+      description:
+        'IA generativa aplicada al análisis y validación de consultas SQL.',
+
+      problem:
+        'Las necesidades de negocio expresadas en lenguaje natural deben transformarse en consultas SQL correctas, evitando errores, columnas inexistentes o interpretaciones incorrectas de los datos.',
+
+      solution:
+        'Se desarrolló un laboratorio práctico en MySQL donde se utiliza Inteligencia Artificial generativa como herramienta de asistencia para interpretar requerimientos, diseñar prompts técnicos, proponer consultas SQL y validar posteriormente los resultados sobre una base de datos real.',
+
+      technologies: [
+        'MySQL 8.4.3',
+        'SQL',
+        'IA Generativa',
+        'Laragon',
+        'Visual Studio Code'
+      ],
+
+      features: [
+        'Diseño de prompts técnicos',
+        'Análisis de requerimientos',
+        'Consultas SQL asistidas por IA',
+        'Validación manual de resultados',
+        'JOIN y LEFT JOIN',
+        'GROUP BY y HAVING',
+        'Funciones de agregación',
+        'Detección de stock crítico',
+        'Análisis de ventas'
+      ],
+
+      icon: '▦',
+
+      gallery: [
+        'images/projects/ai-sql-lab-1.png',
+        'images/projects/ai-sql-lab-2.png',
+        'images/projects/ai-sql-lab-3.png'
+      ]
+    }
+
+  ];
 
   openProject(project: Project) {
 
@@ -251,27 +290,17 @@ export class Projects {
 
   }
 
-
   closeProject() {
-
     this.selectedProject = null;
-
     this.selectedGalleryImage = null;
-
   }
-
 
   openImage(image: string) {
-
     this.selectedGalleryImage = image;
-
   }
 
-
   closeImage() {
-
     this.selectedGalleryImage = null;
-
   }
 
 }
